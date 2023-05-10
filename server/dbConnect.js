@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 module.exports = async() =>{
-    const mongoUri = process.env.MONGO_URI;
+    const mongoUri = process.env.MONGODB_URI;
 
     try {
         const connect = await mongoose.connect(mongoUri,{
