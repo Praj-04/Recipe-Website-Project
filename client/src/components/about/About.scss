@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Great+Vibes&family=Mallanna&family=Mate+SC&family=Playball&family=STIX+Two+Text:wght@500&family=Sacramento&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+.About {
+  height: calc(100vh - 80px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+  .styleP {
+    font-family: 'Tangerine', cursive;
+    font-size: 2rem;
+    padding: 60px;
+    
+    .one{
+      padding: 20px 0px;
+    }
+  }
+
+  .bottom-line{
+    padding: 0px 60px;
+
+    .two{
+      font-family: 'Amaranth', sans-serif;
+    }
+  }
+}

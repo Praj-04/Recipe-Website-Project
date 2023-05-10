@@ -1,0 +1,121 @@
+.Navbar {
+  border-bottom: 1px solid var(--border-color);
+  height: 80px;
+  box-shadow: 1px 1px 1px rgb(238, 205, 205);
+  padding: 0px 100px;
+
+  .container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .banner {
+    font-size: 2rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    color: rgb(69, 64, 65);
+    text-shadow: 2px 2px 2px grey;
+  }
+  .new-recipe {
+    padding: 5px;
+    border-radius: var(--border-radius);
+    border: 1px solid grey;
+    background-color: rgb(179, 28, 28);
+    color: white;
+    font-weight: 550;
+    box-shadow: 1px 1px 1px grey;
+  }
+
+  .right-side {
+    display: flex;
+     gap: 30px;
+    font-size: 1.5rem;
+  
+  .log-out {
+    color: rgb(48, 42, 43);
+  }
+}
+
+  .banner:hover {
+   
+    color: rgb(20, 20, 20);
+    
+  }
+  .banner:active {
+    color: #666565;
+  }
+
+  .new-recipe:hover {
+    background-color: rgb(226, 63, 63);
+  }
+
+  .new-recipe:active {
+    background-color: rgb(201, 91, 91);
+  }
+
+
+  @media only screen and (max-width:700px)  { //less tha 440
+
+    padding: 0px 10px;
+
+    .banner {
+      font-size: 1.9rem;
+     
+    }
+    .new-recipe {
+      padding: 4px;
+      
+    }
+
+    .right-side {
+     
+      font-size: 1.4rem;
+  
+  }
+  }
+
+  @media only screen and (max-width: 440px)  { //less tha 440
+
+    padding: 0px 5px;
+
+    .banner {
+      font-size: 1.4rem;
+     
+    }
+    .new-recipe {
+      padding: 3.5px;
+      
+    }
+
+    .right-side {
+     
+      font-size: 1.2rem;
+  
+  }
+  }
+  @media only screen and (max-width: 360px)  { //less tha 360
+
+    padding: 0px 5px;
+
+    .banner {
+      font-size: 1.1rem;
+     
+    }
+    .new-recipe {
+      padding: 2px;
+      
+    }
+
+    .right-side {
+     
+      font-size: 1.0rem;
+  
+  }
+    
+}
+
+
+ 
+}

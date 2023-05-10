@@ -1,0 +1,112 @@
+.RecipeFeed {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgb(247, 132, 132) rgb(246, 227, 223);
+  scrollbar-width: none;
+
+  .top-part {
+    margin: 30px;
+  }
+
+  .filter-component {
+    display: flex;
+    justify-content: end;
+
+    gap: 20px;
+  }
+
+  .recipe-single-line {
+    // height: 500px;
+    height: 45px;
+    display: flex;
+    border: 1px solid rgb(241, 189, 189);
+    box-shadow: rgba(152, 151, 151, 0.35) 0px 5px 15px;
+    // box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+
+  .style-heading {
+    font-weight: 400;
+    width: 350px;
+  }
+
+  .mini-recipeImage {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+
+  .search-bar {
+    outline: none;
+    outline-color: rgb(242, 85, 85);
+    padding-left: 10px;
+    border: 1px solid rgb(231, 139, 139);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .top-part {
+      margin: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+    .top-part {
+      margin: 10px;
+    }
+
+    .filter-component {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.9rem;
+
+      .search-bar {
+        padding-left: 10px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .style-heading {
+      width: 190px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .top-part {
+      margin: 10px;
+    }
+
+    .filter-component {
+      gap: 3px;
+      font-size: 0.8rem;
+
+      .search-bar {
+        padding-left: 5px;
+
+        font-size: 0.7rem;
+      }
+    }
+
+    .style-heading {
+      width: 160px;
+      font-size: 0.9rem;
+    }
+  }
+
+ 
+
+
+}

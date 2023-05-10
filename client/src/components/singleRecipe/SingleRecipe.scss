@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mate+SC&family=Playball&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Average+Sans&family=Great+Vibes&family=Mate+SC&family=Playball&family=STIX+Two+Text:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Average+Sans&family=Great+Vibes&family=Mallanna&family=Mate+SC&family=Playball&family=STIX+Two+Text:wght@500&display=swap");
+
+.SingleRecipe {
+  // height: calc(100vh - 130px);
+  overflow-y: scroll;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  gap: 10px;
+
+  h1 {
+    text-align: center;
+    font-family: "Great Vibes", cursive;
+
+    font-family: "Mate SC", serif;
+
+    font-family: "Playball", cursive;
+    color: rgb(57, 57, 56);
+  }
+
+  .top-section {
+    // height: 50%;
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+
+    .image-section {
+      width: 100%;
+      height: 300px;
+      //  border: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .recipe-image {
+        width: 350px;
+        height: 100%;
+        // border: 1px solid rgb(163, 26, 26);
+      }
+    }
+
+    .tiny-section {
+      padding: 5px 50px;
+
+      .together {
+        display: flex;
+        width: 70%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 10px;
+
+        font-family: "Average Sans", sans-serif;
+        font-family: "Great Vibes", cursive;
+        font-family: "Mate SC", serif;
+        font-family: "Playball", cursive;
+        font-family: "STIX Two Text", serif;
+        font-size: 1rem;
+      }
+
+      .styleIt-desc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: italic;
+        font-size: 1.2rem;
+        padding: 10px 0px;
+      }
+    }
+
+    .mid-section {
+      border: 1px solid rgb(188, 186, 186);
+      width: 70%;
+      padding: 5px 50px;
+      margin: auto;
+      margin-bottom: 5px;
+
+      .style-it {
+        font-family: "Average Sans", sans-serif;
+        font-family: "Great Vibes", cursive;
+        font-family: "Mallanna", sans-serif;
+        font-family: "Mate SC", serif;
+        font-family: "Playball", cursive;
+        font-family: "STIX Two Text", serif;
+        margin-bottom: 5px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .video-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    .style-video {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .together {
+      font-size: 0.6rem;
+      flex-direction: column;
+    }
+
+    .styleIt-desc{
+      font-size: 0.8rem;
+    }
+
+    .mid-section{
+      font-size: 0.6rem;
+    }
+  }
+
+  
+
+ 
+}

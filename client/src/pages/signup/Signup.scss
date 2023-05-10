@@ -1,0 +1,106 @@
+.Signup {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: hsla(19, 48%, 87%, 1);
+
+  background: hsla(19, 85%, 75%, 1);
+
+  background: linear-gradient(
+    360deg,
+    hsla(19, 85%, 75%, 1) 0%,
+    hsla(186, 70%, 57%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    360deg,
+    hsla(19, 85%, 75%, 1) 0%,
+    hsla(186, 70%, 57%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    360deg,
+    hsla(19, 85%, 75%, 1) 0%,
+    hsla(186, 70%, 57%, 1) 100%
+  );
+  .heading {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+  }
+
+  .signup-box {
+    padding: 40px;
+    min-width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(145, 132, 132);
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-block: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 8px;
+  }
+
+  button {
+    display: inline;
+    margin-block: 8px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border-color: rgb(92, 95, 96);
+    color: white;
+    background-color: rgb(42, 145, 152);
+  }
+
+  button:hover {
+    background-color: rgb(29, 92, 98);
+  }
+
+  button:active {
+    background-color: rgb(42, 145, 152);
+  }
+
+  .sub-heading {
+    margin-top: 16px;
+    font-weight: 600;
+  }
+
+  @media only screen and (max-width: 440px) {
+
+    .heading {
+       
+        font-size: 1.5rem;
+      }
+
+      .signup-box {
+        padding: 20px;
+        min-width: 300px;
+       
+      }
+
+  }
+
+  @media only screen and (max-width: 360px) {
+    .heading {
+       
+        font-size: 1.0rem;
+      }
+
+
+      .signup-box {
+        padding: 15px;
+        min-width: 250px;
+       
+      }
+
+  }
+
+
+}

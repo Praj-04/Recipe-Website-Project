@@ -1,0 +1,197 @@
+.CreateRecipe {
+  height: calc(100vh - 80px);
+  border: 1px solid rgb(217, 216, 216);
+  box-shadow: 2px 2px 2px grey;
+  border-radius: 5px;
+  overflow-y: scroll;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgb(247, 132, 132) rgb(246, 227, 223);
+
+  .form-style {
+    // border: 7px solid rgb(226, 20, 20);
+    height: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    text-shadow: 2px 2px 2px rgb(237, 137, 137);
+  }
+  .individual-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border:1px solid blue;
+    margin-top: 10px;
+  }
+  .each-field {
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .label-style {
+    width: 150px;
+  }
+
+  .input-style {
+    width: 300px;
+  }
+
+  .extrastyle {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid rgb(7, 7, 7);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  .hide {
+    display: none;
+  }
+
+  .drop-downs {
+    display: flex;
+    // border:1px solid green;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .steps {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px;
+    // border: 1px solid black;
+  }
+
+  .input-style1 {
+    width: 250px;
+  }
+
+  .create-button-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .create-button {
+    margin: 20px;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: rgb(179, 28, 28);
+    color: white;
+    border-radius: 5px;
+  }
+
+  .space {
+    margin: 2px;
+  }
+
+  .create-button:hover {
+    background-color: rgb(226, 63, 63);
+  }
+
+  .create-button:active {
+    background-color: rgb(201, 91, 91);
+  }
+
+  @media only screen and (max-width: 700px) {
+    font-size: 0.9rem;
+    .individual-fields {
+      margin-top: 8px;
+    }
+    .each-field {
+      margin: 6px;
+    }
+    .label-style {
+      width: 140px;
+    }
+    .input-style {
+      width: 250px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .left-part,
+    .right-part {
+      border: 1px solid rgb(207, 205, 205);
+      padding: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 440px) {
+    font-size: 0.7rem;
+
+    .individual-fields {
+      margin-top: 7px;
+    }
+    .each-field {
+      margin: 5px;
+    }
+    .label-style {
+      width: 110px;
+    }
+    .input-style {
+      width: 160px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .left-part,
+    .right-part {
+      border: 1px solid rgb(207, 205, 205);
+      padding: 10px;
+    }
+
+    .create-button {
+      margin: 10px;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 0.6rem;
+
+    .label-style {
+      width: 92px;
+    }
+    .input-style {
+      width: 140px;
+    }
+    .drop-downs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0px;
+    }
+
+    .create-button {
+      margin: 10px;
+      font-size: 0.7rem;
+    }
+  }
+}
