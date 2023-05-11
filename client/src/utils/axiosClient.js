@@ -1,11 +1,11 @@
 import axios from "axios";
-// import {getItem} from './localStorageManager'
 import { getItem, KEY_ACCESS_TOKEN, removeItem, setItem } from "./localStorageManager";
 
 let baseURL;
-
+console.log(`the server url is ${process.env.REACT_APP_SERVER_BASE_URL}`)
 export const axiosClient = axios.create({
-  baseURL : process.env.REACT_APP_SERVER_BASE_URL || "http://localhost:4000",
+    // baseURL : process.env.REACT_APP_SERVER_BASE_URL || "http://localhost:4000",
+    baseURL : 'https://recipe-website-project.vercel.app' || "http://localhost:4000",
   withCredentials: true, //used to send cookies
 });
 
@@ -22,8 +22,8 @@ axiosClient.interceptors.response.use(async (response) => {
   const data = response.data; //when you fetch using axios..apart from the result in data(we get in data field)..we get more extra info from backend.
  //if the response is success i.e access token is valid
   if (data.status === "ok") {
-    //  console.log("the access token is valid")
-    //  console.log(data);
+     console.log("the access token is valid")
+     console.log(data);
     return data;
   }
 
@@ -108,7 +108,10 @@ if (statusCode === 401 && !originalRequest._retry) {
               ] = `Bearer ${response.data.result.accessToken}`;
   
   
-  
+  console.log(
+             "token from backend after generating new access token ",
+              response.data.result.accessToken
+           );
   
               const refreshedResponse = await axios(originalRequest);
   

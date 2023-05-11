@@ -31,9 +31,10 @@ app.use(express.json({limit:"150mb"}))
 
 app.use(morgan("common"));
 app.use(cookieParser());
-app.use(cors({
+console.log( `the origin of client is${process.env.CORS_ORIGIN}`);
+app.use(cors({  
   credentials:true,
-  origin: process.env.CORS_ORIGIN||"http://localhost:3000"
+  origin: 'https://recipe-hub-mauve.vercel.app' || "http://localhost:3000"
 }));
 
 //route
