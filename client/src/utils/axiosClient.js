@@ -4,8 +4,8 @@ import { getItem, KEY_ACCESS_TOKEN, removeItem, setItem } from "./localStorageMa
 let baseURL;
 console.log(`the server url is ${process.env.REACT_APP_SERVER_BASE_URL}`)
 export const axiosClient = axios.create({
-    // baseURL : process.env.REACT_APP_SERVER_BASE_URL || "http://localhost:4000",
-    baseURL : 'https://recipe-website-project.vercel.app' || "http://localhost:4000",
+    baseURL : process.env.REACT_APP_SERVER_BASE_URL || "http://localhost:4000",
+    // baseURL : 'https://recipe-website-project.vercel.app' || "http://localhost:4000",
   withCredentials: true, //used to send cookies
 });
 

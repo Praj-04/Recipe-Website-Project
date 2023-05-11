@@ -34,7 +34,7 @@ app.use(cookieParser());
 console.log( `the origin of client is${process.env.CORS_ORIGIN}`);
 app.use(cors({  
   credentials:true,
-  origin: 'https://recipe-hub-mauve.vercel.app' || "http://localhost:3000"
+  origin: process.env.CORS_ORIGIN || "http://localhost:3000"
 }));
 
 //route
