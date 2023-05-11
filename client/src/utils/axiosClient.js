@@ -1,13 +1,35 @@
 import axios from "axios";
 import { getItem, KEY_ACCESS_TOKEN, removeItem, setItem } from "./localStorageManager";
 
-let baseURL;
-console.log(`the server url is ${process.env.REACT_APP_SERVER_BASE_URL}`)
+// old code start
+// let baseURL;
+// console.log(`the server url is ${process.env.REACT_APP_SERVER_BASE_URL}`)
+
+// export const axiosClient = axios.create({
+//   baseURL : process.env.REACT_APP_SERVER_BASE_URL || "http://localhost:4000",
+//   // baseURL : 'https://recipe-website-project.vercel.app' || "http://localhost:4000",
+// withCredentials: true, //used to send cookies
+// });
+// ...............................................
+// old code end 
+
+//code to choose between development or production
+
+
+//new code start
+let baseURL = 'http://localhost:4000/';
+console.log('env is',process.env.NODE_ENV);
+if(process.env.NODE_ENV === 'production'){
+  console.log('baseurl is',process.env.REACT_APP_SERVER_BASE_URL);
+  baseURL = process.env.REACT_APP_SERVER_BASE_URL
+}
+
+
 export const axiosClient = axios.create({
-    baseURL : process.env.REACT_APP_SERVER_BASE_URL || "http://localhost:4000",
-    // baseURL : 'https://recipe-website-project.vercel.app' || "http://localhost:4000",
-  withCredentials: true, //used to send cookies
+    baseURL,
+    withCredentials: true, //used to send cookies
 });
+//new code end
 
 //adds access token in initial request and sends the request to backend
 axiosClient.interceptors.request.use((request) => {

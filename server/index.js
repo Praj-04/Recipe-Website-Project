@@ -28,14 +28,32 @@ const PORT = process.env.PORT || 4001;
 // middlewares
 // app.use(express.json());
 app.use(express.json({limit:"150mb"}))
-
 app.use(morgan("common"));
 app.use(cookieParser());
-console.log( `the origin of client is${process.env.CORS_ORIGIN}`);
+
+//bhaiyas code
+let origin = "http://localhost:3000";
+console.log("here env is ", process.env.NODE_ENV);
+console.log('the origin url is ',origin)
+if (process.env.NODE_ENV == 'production') {
+  console.log('I am inside production');
+  origin = process.env.CORS_ORIGIN;
+  console.log('origin url is ',origin);
+}
+
 app.use(cors({  
   credentials:true,
-  origin: process.env.CORS_ORIGIN || "http://localhost:3000"
+  origin
 }));
+
+//old code
+// console.log( `the origin of client is${process.env.CORS_ORIGIN}`);
+// app.use(cors({  
+//   credentials:true,
+//   origin: process.env.CORS_ORIGIN || "http://localhost:3000"
+// }));
+//............................
+
 
 //route
 app.use("/auth", authRouter);
