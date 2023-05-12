@@ -14,11 +14,12 @@ import About from "./components/about/About";
 import { useSelector } from "react-redux";
 import { useEffect, useRef } from "react";
 import LoadingBar from "react-top-loading-bar";
+import OnlyIfNotLoggedIn from "./components/OnlyIfNotLoggedIn";
 
 function App() {
   const isLoading = useSelector((state) => state.appConfigReducer.isLoading);
   const loadingRef = useRef(null);
-  
+
   useEffect(() => {
     if (isLoading) {
       loadingRef.current?.continuousStart();
@@ -40,15 +41,16 @@ function App() {
           </Route>
         </Route>
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route element={<OnlyIfNotLoggedIn />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Route>
 
         <Route element={<UserHome />}>
           <Route path="/recipes" element={<Recipes />} />
           {/* <Route path="/recipes" element={<RecipeFeed />} /> */}
           <Route path="/recipe/:recipeId" element={<SingleRecipe />} />
           <Route path="/about" element={<About />} />
-         
         </Route>
 
         {/* add contact form, about the user etc */}
