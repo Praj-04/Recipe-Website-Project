@@ -21,7 +21,8 @@ import {
 //code to choose between development or production
 
 //new code start
-let baseURL = "http://localhost:4000/";
+// let baseURL = "http://localhost:4000/"; 
+let baseURL = process.env.REACT_APP_SERVER_BASE_URL;
 console.log("env is", process.env.NODE_ENV);
 if (process.env.NODE_ENV === "production") {
   console.log("baseurl is", process.env.REACT_APP_SERVER_BASE_URL);
