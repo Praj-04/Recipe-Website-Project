@@ -64,9 +64,9 @@ app.use("/auth", authRouter);
 // app.use("/recipe", recipeDevelopRouter);
 app.use("/recipes", recipesRouter);
 
-// app.get('/',(req,res)=>{
-//     res.status(200).send('Server is up and running')
-// })
+app.get('/',(req,res)=>{
+    res.status(200).send('Server is up and running')
+})
 
 dbConnect();
 
