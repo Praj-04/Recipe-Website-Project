@@ -36,9 +36,8 @@ app.use(cookieParser());
 
 //new code
 let origin = "http://localhost:3000";
-// let origin = process.env.CORS_ORIGIN;
 console.log("here env is ", process.env.NODE_ENV);
-console.log('the origin url is ',origin)
+console.log('the client url is ',origin)
 if (process.env.NODE_ENV === 'production') {
   console.log('I am inside production');
   origin = process.env.CORS_ORIGIN;
