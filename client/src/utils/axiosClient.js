@@ -22,7 +22,8 @@ import {
 
 //new code start
 // let baseURL = "http://localhost:4000/"; =>  for local uncomment this line and comment the below line
-let baseURL = process.env.REACT_APP_SERVER_BASE_URL;
+// let baseURL = process.env.REACT_APP_SERVER_BASE_URL;
+let baseURL = "http://localhost:4000/";  //we set npm run build in vercel,it will set node_env to prod
 console.log("env is", process.env.NODE_ENV);
 console.log('url of server is ',baseURL )
 if(process.env.NODE_ENV === "production") {
